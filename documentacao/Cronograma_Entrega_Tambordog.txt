@@ -1,0 +1,38 @@
+Roteiro de Gravação das Aulas
+=============================
+
+Horários:
+==> Frank - Nas Tardes Exceto Terças
+==> Felipe - Nas Tardes A Partir das 16
+==> Pedro - Demanda (noite qq dia)
+==> Stella - Demanda
+
+1 - Transformar o TambordDog BackEnd no Auth 
+** Vamos usar o Auth (oficial)
+
+2 - Migração / Integração da Classe CRUD do FronEnd com o BackEnd 
+** Revisão das 2 classes / "2 Lados"
+
+3 - Controle de Permissões dentro do sistema
+** Definir as permissões no sistema por grupo de usuários
+
+4 - Menu Inicial / Ícones
+** De acordo com o Usuário / Grupo somente o que for permitido
+
+5 - Revisar WebAPP / PWA
+
+6 - Publicar o WebAPP / PWA
+
+7 - Outros / A resolver
+
+- Apuração das Provas (Digitação dos Resultados das Provas)
+- Ranqueamento
+- Liberação para Provas
+- Visualização de Resultados pelos usuários
+- 
+
+
+
+
+
+

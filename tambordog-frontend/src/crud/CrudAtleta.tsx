@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { AtletaInterface } from "../../../tambordog-backend/src/interfaces/atleta.interfaces"
 
 import { Grid, IconButton, Paper, Tooltip } from "@mui/material"
-import InputFormat from "../components/InputFormat"
+import InputText from "../components/InputText"
 import ClsCrud from "../utils/ClsCrud"
 import Condicional from "../components/Condicional"
 import ClsValidacao from "../utils/ClsValidacao"
@@ -19,7 +19,7 @@ import {
 } from "../globalstate/ContextoGlobal"
 import DataTable, { DataTableCabecalhoInterface } from "../components/DataTable"
 import CrudCao from "./CrudCao"
-import DevExibirJSON from "../components/DevExibirJSON"
+import ExibirJSONDev from "../components/ExibirJSONDev"
 
 enum StatusForm {
   INCLUIR = "INCLUIR",
@@ -257,7 +257,7 @@ export default function CrudAtleta() {
             <Grid container>
               <Condicional condicao={statusForm == StatusForm.PESQUISAR}>
                 <Grid item xs={11}>
-                  <InputFormat
+                  <InputText
                     label="Pesquisa"
                     setState={setPesquisa}
                     dados={pesquisa}
@@ -317,7 +317,7 @@ export default function CrudAtleta() {
                 ].includes(statusForm)}
               >
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Nome"
                     setState={setRsDados}
                     dados={rsDados}
@@ -329,7 +329,7 @@ export default function CrudAtleta() {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="CPF"
                     mask="cpf"
                     setState={setRsDados}
@@ -342,7 +342,7 @@ export default function CrudAtleta() {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Nascimento"
                     tipo="date"
                     setState={setRsDados}
@@ -355,7 +355,7 @@ export default function CrudAtleta() {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Telefone"
                     mask="tel"
                     setState={setRsDados}
@@ -368,7 +368,7 @@ export default function CrudAtleta() {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Whats APP"
                     mask="tel"
                     setState={setRsDados}
@@ -381,7 +381,7 @@ export default function CrudAtleta() {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="e-mail"
                     setState={setRsDados}
                     dados={rsDados}
@@ -392,7 +392,7 @@ export default function CrudAtleta() {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Senha"
                     setState={setRsDados}
                     dados={rsDados}
@@ -405,7 +405,7 @@ export default function CrudAtleta() {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Ativo"
                     setState={setRsDados}
                     dados={rsDados}
@@ -478,7 +478,7 @@ export default function CrudAtleta() {
         </Grid>
       </Grid>
 
-      <DevExibirJSON oque={['usuarioState', usuarioState]} />
+      <ExibirJSONDev oque={['usuarioState', usuarioState]} />
     </>
   )
 }

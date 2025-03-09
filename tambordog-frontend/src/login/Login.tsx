@@ -9,7 +9,6 @@ import {
   Paper,
 } from "@mui/material"
 
-import InputFormat from "../components/InputFormat"
 import ClsValidacao from "../utils/ClsValidacao"
 import { useNavigate } from "react-router-dom"
 import {
@@ -21,6 +20,7 @@ import { RespostaPadraoInterface } from "../../../tambordog-backend/src/interfac
 
 import { LoginInterface } from '../../../tambordog-auth/src/interfaces/login.interfaces'
 import { PermissoesTypes } from "../backendImports/types/PermissoesTypes"
+import InputText from "../components/InputText"
 
 export default function Login() {
 
@@ -134,7 +134,7 @@ export default function Login() {
               </Grid>
 
               <Grid item xs={12} sx={{ mt: 3 }}>
-                <InputFormat
+                <InputText
                   label="CPF"
                   mask="000.000.000-00"
                   setState={setDados}
@@ -145,7 +145,7 @@ export default function Login() {
               </Grid>
 
               <Grid item xs={12} sx={{ mt: 3 }}>
-                <InputFormat
+                <InputText
                   field="senha"
                   type="password"
                   label="Senha"

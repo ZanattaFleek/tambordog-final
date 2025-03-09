@@ -1,0 +1,129 @@
+Pendências
+==========
+
+Interface Site (Anonimo)
+========================
+1 - Página Inicial / Novo Layout
+
+
+Interface Administrativo
+========================
+1 - Pontuação de Prova (Input)
+2 - Apuração Prova
+3 - Apuração de Campeonato
+
+4 - Apresentar na listagem de cães a qual categoria ele pertence e qual raça (tela de cadastro de atleta)
+
+OK - Alteração de Status da Prova
+
+Interface Atleta
+================
+* Completa
+
+1 - Cadastro do Atleta (Anonimo)
+
+2 - Cadastrar os próprios cães
+
+1 - Listagem das Provas em Aberto --> OK (Entrada - Concluir layOut)
+
+2 - Ranking do Atleta - Campeonato
+
+2.2 - Ranking do Atleta - Prova em Andamento
+
+3 - Inscrição para Prova
+
+4 - Cancelamento de Inscrição
+
+
+
+===============================================
+
+
+
+idCampeonato --> ComboBox
+TermoAceite --> PDF
+Foto --> 
+Prova Detalhe --> Categoria / Voltas / Detalhes
+
+
+Status Possíveis:
+
+1 - Inscrição Aberta
+* Aparecer para os usuários "abertos"
+
+2 - Inscrição Encerrada
+* Aparecer para os usuários "abertos"
+
+3 - Em Andamento
+* Aparecer para os usuários "abertos"
+* Não permitir Inscrição
+* Permitir tela de Acompanhamento de Prova (Ranking)
+* Validar Quais Cães / Atletas irão competir e em quais categorias
+* Permitir Digitação das Pistas / Provas
+ 
+4 - Suspenso
+* Não Aparecer para os usuários
+
+5 - Cancelada
+* Prova Cancelada
+
+
+
+app.tambordog.com.br 4000
+
+
+======================================
+
+1 - Pontuação de Prova (Input)
+
+* Prova em Andamento (Selecionar)
+
+* Selecionar os Participantes dentro dos inscritos
+
+* Desclassificar por
+--> Sem Condições de Competir
+--> Ausência
+
+* Sorteio dos inscritos
+
+* Selecionar a Categoria
+* Selecionar a Pista
+
+Contabilizar:
+* Tambores Derrubados
+
+================================================================================
+TELAS DO ATLETA
+================================================================================
+
+1 - Entrada Inicial (Acesso Anônimo)
+
+* Botão para Login e/ou Cadastro
+
+* Botão para cadastro
+
+* Provas em Aberto
+
+* Botão de WhatsAPP para Suporte
+
+
+--> Tela de Cadastro de Atleta
+	-- Dados de Cadastro
+	-- Senha
+	-- Confirmação por Email ou WhatsAPP
+
+
+
+2 - Acesso do Atleta Autenticado
+
+- Cadastro do Cão (Não Altera)
+- Visualiza o Ranqueamento
+- Inscrição em Prova
+- Cancelamento de Inscrição em Prova
+- Visualizar o resultado das provas em andamento
+
+
+Pendências do Sistema
+- Criação do Usuário do Sistema / Colocar 
+- Colocar no GlobalState o tipo do usuário --> Sistema ou Atleta
+

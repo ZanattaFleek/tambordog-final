@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { RacaInterface } from "../../../tambordog-backend/src/interfaces/raca.interfaces"
 
 import { Grid, IconButton, Paper, Tooltip } from "@mui/material"
-import InputFormat from "../components/InputFormat"
+import InputText from "../components/InputText"
 import ClsCrud from "../utils/ClsCrud"
 import { StatusForm } from "../utils/ClsStatusForm"
 import Condicional from "../components/Condicional"
@@ -178,7 +178,7 @@ export default function CrudRaca() {
             <Grid container>
               <Condicional condicao={statusForm == StatusForm.PESQUISAR}>
                 <Grid item xs={11}>
-                  <InputFormat
+                  <InputText
                     label="Pesquisa"
                     setState={setPesquisa}
                     dados={pesquisa}
@@ -226,7 +226,7 @@ export default function CrudRaca() {
 
               <Condicional condicao={statusForm !== StatusForm.PESQUISAR}>
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Nome"
                     setState={setRsDados}
                     dados={rsDados}

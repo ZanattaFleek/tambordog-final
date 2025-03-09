@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 
 import { Grid, IconButton, Paper, Tooltip } from "@mui/material"
-import InputFormat from "../components/InputFormat"
+import InputText from "../components/InputText"
 import ClsCrud from "../utils/ClsCrud"
 import { StatusForm } from "../utils/ClsStatusForm"
 import Condicional from "../components/Condicional"
@@ -160,11 +160,12 @@ export default function CrudCao({ rsAtleta }: PropsInterface) {
             setStatusForm(StatusForm.PESQUISAR)
           } else {
             setMensagemState({
-              botaoFechar: true,
+              cb: null,
+              exibirBotao: "Fechar",
               mensagem: "Erro no Cadastro - Consulte Suporte",
               titulo: "Erro no Cadastro",
-              tipo: "erro",
-              exibir: true,
+              tipo: "error",
+              exibir: true
             })
           }
         })
@@ -263,15 +264,11 @@ export default function CrudCao({ rsAtleta }: PropsInterface) {
     <>
       <Grid container justifyContent="center">
         <Grid item xs={12}>
-          <ShowText titulo="Atleta" descricao={rsAtleta.nome} />
+          <ShowText label="Atleta" dados={rsAtleta} field="nome" />
         </Grid>
 
         <Grid item xs={12}>
-          <ShowText
-            titulo="WhatsAPP"
-            tipo="whatsapp"
-            descricao={rsAtleta.whatsapp}
-          />
+          <ShowText label="WhatsAPP" dados={rsAtleta} field="whatsapp" />
         </Grid>
 
         <Grid item xs={12} md={8}>
@@ -279,7 +276,7 @@ export default function CrudCao({ rsAtleta }: PropsInterface) {
             <Grid container>
               <Condicional condicao={statusForm == StatusForm.PESQUISAR}>
                 <Grid item xs={11}>
-                  <InputFormat
+                  <InputText
                     label="Pesquisa"
                     setState={setPesquisa}
                     dados={pesquisa}
@@ -327,7 +324,7 @@ export default function CrudCao({ rsAtleta }: PropsInterface) {
 
               <Condicional condicao={statusForm !== StatusForm.PESQUISAR}>
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Nome"
                     setState={setRsDados}
                     dados={rsDados}
@@ -339,7 +336,7 @@ export default function CrudCao({ rsAtleta }: PropsInterface) {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Data Nascimento"
                     setState={setRsDados}
                     dados={rsDados}
@@ -351,7 +348,7 @@ export default function CrudCao({ rsAtleta }: PropsInterface) {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Ativo"
                     setState={setRsDados}
                     dados={rsDados}

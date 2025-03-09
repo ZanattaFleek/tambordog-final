@@ -3,7 +3,6 @@ import React, { useContext, useEffect, useState } from "react"
 import { ProvaInterface } from "../../../tambordog-backend/src/interfaces/prova.interfaces"
 
 import { Grid, IconButton, Paper, Tooltip } from "@mui/material"
-import InputFormat from "../components/InputFormat"
 import ClsCrud from "../utils/ClsCrud"
 import { StatusForm } from "../utils/ClsStatusForm"
 import Condicional from "../components/Condicional"
@@ -24,12 +23,13 @@ import {
   StatusProvaType,
   StatusProvaTypes,
 } from "../backendImports/types/ProvaTypes"
-import ClsFormatacao from "../utils/ClsFormatacao"
 import ComboBox from "../components/ComboBox"
 import { CampeonatoInterface } from "../../../tambordog-backend/src/interfaces/campeonato.interfaces"
-import InputFileUpload from "../components/InputFileUpload"
 
 import CrudProvaCategoriaDetalhe from "./CrudProvaCategoriaDetalhe"
+import InputText from "../components/InputText"
+import ClsFormatacao from "../utils/ClsFormatacao"
+import InputFileUpload from "../components/InputFileUpload"
 
 export default function CrudProva() {
   const clsFormatacao: ClsFormatacao = new ClsFormatacao()
@@ -266,7 +266,7 @@ export default function CrudProva() {
             <Grid container>
               <Condicional condicao={statusForm == StatusForm.PESQUISAR}>
                 <Grid item xs={11}>
-                  <InputFormat
+                  <InputText
                     label="Pesquisa"
                     setState={setPesquisa}
                     dados={pesquisa}
@@ -320,7 +320,7 @@ export default function CrudProva() {
 
               <Condicional condicao={statusForm !== StatusForm.PESQUISAR}>
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Nome"
                     setState={setRsDados}
                     dados={rsDados}
@@ -332,7 +332,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12}>
-                  <InputFormat
+                  <InputText
                     label="Data Hora Prova"
                     setState={setRsDados}
                     dados={rsDados}
@@ -344,7 +344,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12} md={9} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="Endereço"
                     tipo="text"
                     dados={rsDados}
@@ -357,7 +357,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={9} md={3} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="Bairro"
                     tipo="text"
                     dados={rsDados}
@@ -370,7 +370,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12} md={5} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="Cidade"
                     tipo="text"
                     dados={rsDados}
@@ -383,7 +383,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12} md={2} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="UF"
                     tipo="text"
                     dados={rsDados}
@@ -396,7 +396,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12} md={3} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="Valor da Prova"
                     dados={rsDados}
                     tipo="currency"
@@ -408,7 +408,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12} md={3} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="Valor da Prova até 12(anos)"
                     tipo="currency"
                     type="currency"
@@ -421,7 +421,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12} md={3} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="Telefone"
                     setState={setRsDados}
                     dados={rsDados}
@@ -434,7 +434,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12} md={3} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="WhatsApp"
                     setState={setRsDados}
                     dados={rsDados}
@@ -447,7 +447,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12} md={6} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="E-mail"
                     setState={setRsDados}
                     dados={rsDados}
@@ -489,7 +489,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12} md={6} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="Latitude"
                     tipo="text"
                     dados={rsDados}
@@ -502,7 +502,7 @@ export default function CrudProva() {
                 </Grid>
 
                 <Grid item xs={12} md={6} sx={{ mt: 2, pl: { md: 1 } }}>
-                  <InputFormat
+                  <InputText
                     label="Longitude"
                     tipo="text"
                     dados={rsDados}
@@ -524,7 +524,8 @@ export default function CrudProva() {
                     label="Campeonato"
                     opcoes={rsCampeonatos}
                     mensagemPadraoCampoEmBranco="Escolha o Campeonato"
-                    onClickPesquisa={(rs) => pesquisarCampeonatos(rs)}
+                    // TODO - Corrigir o Pesquisar Campeonatos
+                    // onClickPesquisa={(rs) => pesquisarCampeonatos(rs)}
                     disabled={statusForm === StatusForm.EXCLUIR || alteracaoStatus}
                   />
                 </Grid>

@@ -28,7 +28,7 @@ import {
 } from "../globalstate/ContextoGlobal"
 import { CategoriaInterface } from "../../../tambordog-backend/src/interfaces/categoria.interfaces"
 import ComboBox from "../components/ComboBox"
-import InputText from "../components/InputFormat"
+import InputText from "../components/InputText"
 import ClsValidacao from "../utils/ClsValidacao"
 import Condicional from "../components/Condicional"
 
